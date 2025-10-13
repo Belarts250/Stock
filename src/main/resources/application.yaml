@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: store
+stripe:
+  apiUrl: https://api.store.com
+  timeout: 1000
+  enabled : true
+  supported-currencies: RWF, USD , EUR
+
+paypal:
+  apiUrl: https://paypal.api.store.com
+  timeout: 2000
+  enabled: false
+  supported-currencies: RWF, WAN , EUR
+default-gateway: stripe
