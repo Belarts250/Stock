@@ -7,6 +7,6 @@ public class EmailService implements NotificationService {
 
     @Override
     public void send(String message) {
-        System.out.println(" From Email 💌");
+        System.out.println(" From Email 💌"+ message);
     }
 }
