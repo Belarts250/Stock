@@ -1,5 +1,7 @@
 package com.codewithdankie.stock;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -12,8 +14,19 @@ public class OrderService {
     @Autowired
     public OrderService( PaymentService paymentService){
         this.paymentService = paymentService;
+        System.out.println("Hey order service created ");
+    }
+    @PostConstruct
+    public void init(){
+        System.out.println("orderService postConstructor");
+    }
+
+    @PreDestroy
+    public  void cleanUp(){
+        System.out.println("OrderServices preDestroy  ");
     }
 //
+
 //    public void setPaymentService( PaymentService paymentService) {
 //        this.paymentService = paymentService;
 //    }
